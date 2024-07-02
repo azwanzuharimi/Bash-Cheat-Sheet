@@ -35,7 +35,8 @@ popd                      # Go back to directory in stack saved by `pushd`
 
 ## Arrays
 ```bash
-my_array=(1 2 3)          # Sample array
+declare -a my_array       # Declare empty array
+my_array=(1 2 3)          # Declare sample array
 ${my_array[@]}            # Returns all items in array
 #{my_array[@]}            # Returns length of array
 ${my_array[1]}            # Returns first element of array (zero indexed)
