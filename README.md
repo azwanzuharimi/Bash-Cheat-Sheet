@@ -34,8 +34,8 @@ popd                      # Go back to directory in stack saved by `pushd`
 ```
 
 ## Arrays
-```
-e.g. my_array=(1 2 3)
+```bash
+my_array=(1 2 3)          # Sample array
 ${my_array[@]}            # Returns all items in array
 #{my_array[@]}            # Returns length of array
 ${my_array[1]}            # Returns first element of array (zero indexed)
@@ -45,7 +45,7 @@ my_array+=(element)       # Append into array
 ```
 
 ## Associative Arrays (Like Python dictionary)
-```
+```bash
 declare -A city_details                                                 # Declare empty associative array
 declare -A city_details=([city_name]="New York") [population]=40000)    # Declare non-empty associative array
 city_details=([city_name]="New York") [population]=40000)               # Adding elements
