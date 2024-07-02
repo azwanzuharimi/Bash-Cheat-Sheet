@@ -33,6 +33,26 @@ pushd foo                 # Go to foo sub-directory and add previous directory t
 popd                      # Go back to directory in stack saved by `pushd`
 ```
 
+## Arrays
+```
+e.g. my_array=(1 2 3)
+${my_array[@]}            # Returns all items in array
+#{my_array[@]}            # Returns length of array
+${my_array[1]}            # Returns first element of array (zero indexed)
+my_array[1]               # Overwrite 1st element of array
+${my_array[@]:N:M}        # Return Nth element with total number of M elements
+my_array+=(element)       # Append into array
+```
+
+## Associative Arrays (Like Python dictionary)
+```
+declare -A city_details                                                 # Declare empty associative array
+declare -A city_details=([city_name]="New York") [population]=40000)    # Declare non-empty associative array
+city_details=([city_name]="New York") [population]=40000)               # Adding elements
+${city_details[city_name]}                                              # Access value
+${!city_details[@]}                                                     # Return all keys (i.e. city_name, population)
+```
+
 ## Creating Directories
 
 ```bash
